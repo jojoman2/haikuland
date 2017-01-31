@@ -1,0 +1,34 @@
+<template name="haiku">
+
+      <div class="haikuDiv" data-role="main">
+        <div class="col-xs-6" id="firstPageColumn1">
+
+          {{#unless imagesSecond}}
+            {{>haikuImage}}
+          {{/unless}}
+          {{>haikuText}}
+          {{#if imagesSecond}}
+            {{>haikuImage}}
+          {{/if}}
+
+        </div>
+    </div>
+</template>
+
+
+<!-- jdlkfjdslkfjsdlkfjlskdjflksjdlfkjslkdfjsdlkfjldskjflsdkjflksdjflksdjflksjlkfdjslkfjdslkfjsdlkfjsdlkfjsdlkfjsdlkfjlsdkfjlsdk -->
+<template name="haikuImage">
+    <div class="col-xs-6" id="haikuImage" style="background-image:url({{imageSrc}});">
+    </div>
+</template>
+
+<!-- -->
+<template name="haikuText">
+    <div class="col-xs-6" id="haikuText">
+        <br><br><br><br><br>
+        <p>"{{poemRow1}}</p>
+        <p>{{poemRow2}}</p>
+        <p>{{poemRow3}}"</p>
+        <br><br><br>
+    </div>
+</template>

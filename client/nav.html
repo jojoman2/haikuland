@@ -1,0 +1,30 @@
+<template name="nav">
+  <!-- PAGE-HEADER --> 
+  <header class="navbar navbar-fixed-top">
+    <div class="container-fluid">
+      {{> loginButtons}}
+      <a id="app-icon" href="/">
+        <h1>
+          <b>{{appname}}</b>
+        </h1>
+      </a>
+      <input id="searchString" class="btn" type="text" name="string" value="" placeholder="search">
+      <button id="searchBtn" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+      <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle" 
+          data-toggle="dropdown">
+          Explore <span class="caret"></span>
+        </button>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="" id="most-liked-haikus">Most liked</a></li>
+            <li><a href="" id="most-shared-haikus">Most shared</a></li>
+          </ul>
+      </div>
+      {{#if isLoggedIn}}
+        <a class="btn btn-default" id="createNewHaikuBtn" type="submit" href="/new-haiku">Create Haiku</a>
+        <a class="btn btn-default" id="myProfile" type="submit" href="/user/{{getUserId}}">My profile</a>
+
+      {{/if}}
+    </div>
+  </header>
+</template>

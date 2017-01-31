@@ -1,0 +1,88 @@
+<template name="haikuPopup">
+    <div class="modal fade" id="modal-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <!-- USERNAME -->
+                    <div id="username">
+                        <a href="#" id="usernameLink"><h3 class="modal-title"><b>{{username}}</b></h3></a>
+                    </div>
+
+                </div>
+
+                <div class="modal-body">
+                    <div class="row-same-height ui-content" id="pageone" data-role="main">
+                        <div class="col-xs-12 feature" id="firstPageColumn1MODAL">
+
+                            <!--Haiku Image-->
+                            <div class="col-xs-6 col-xs-height col-top" id="haikuImageMODAL" style="background-image:url({{imageSrc}});">
+                            </div>
+
+                            <!--Haiku Text -->
+                            <div class="col-xs-6 col-xs-height col-bottom haikuTextModal" id="haikuText" style='font-family:"{{textFont}}";color:{{textColor}}'>
+                                <br><br><br><br>
+                                <p>"{{poemRow1}}</p>
+                                <p>{{poemRow2}}</p>
+                                <p>{{poemRow3}}"</p>
+                                <br><br><br>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div><br>
+
+                <div class="modal-footer" id="modal-footer">
+                    {{#if hasMoreThanOneLiker}}
+                    <div class="pull-left">
+                        {{getNumberOfLikers}} people like this
+                    </div>
+                    <br />
+                    {{/if}}
+                    {{#if isLoggedIn}}
+
+                    <div class="col-xs-12">
+
+                        <div id="footerButtons" class="col-xs-12">
+                            <!--<button class="btn btn-default" id="likeButton"><span class="glyphicon glyphicon-heart"></span></button>-->
+                            <a href="#" id="likeButton"><span class="glyphicon glyphicon-heart" style="color:{{colorToUse _id}}"></span></a>
+                            <!--<button class="btn btn-default" id="commentButton"><span class="glyphicon glyphicon-pencil"></span></button>-->
+                            <a href="#" id="commentButton"><span class="glyphicon glyphicon-comment"></span></a>
+
+                            <div id="shareButton">
+                            </div>
+
+                            <!-- Kommentarsfält -->
+                            <div id="editUserComment" style="display: none;">
+                                <form role="form">
+                                    <div class="form-group">
+                                        <label for="comment"></label>
+                                        <textarea class="form-control" id="userComment" value="" placeholder="write comment here" rows="1" maxlength="200"></textarea>
+                                        <button type="button" class="btn btn-default" id="postHaikuCommentButton">Post!</button> 
+                                    </div>
+                                                                        
+                                </form>                             
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    {{/if}}
+                      <div id="commentArea">
+                        {{#each getComments}}
+                        <div class="comment">
+                            <b>{{username}}</b> - {{text}}
+                        </div>
+                        {{/each}}
+                    </div>
+
+                
+
+            </div>
+        </div>
+    </div>
+</div>
+</template>

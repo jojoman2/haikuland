@@ -1,0 +1,29 @@
+<template name="flickrtest">
+    <div class="container">
+        <form>
+            <input type="text" name="needle">
+            <input class="btn" type="submit" value="Search">
+        </form>
+        
+    </div>
+</template>
+
+<template name="inspirationPhotos">
+    {{#each flickrPhotos}}
+        <div class="inspirationPhoto">
+        {{>flickrLargeSquare}}
+        </div>
+    {{/each}}
+</template>
+
+<template name="flickrLargeSquare">
+    <img src={{url farm server id secret}}>
+</template>
+
+<template name="flickrSquare">
+    <img src={{url farm server id secret}}>
+</template>
+
+<template name="flickrPhoto">
+    <img src={{url farm server id secret}}>
+</template>

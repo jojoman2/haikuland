@@ -1,0 +1,471 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  /*font-family: 'Indie Flower', cursive;*/
+  /*background-color: #CEF9CE;*/
+  background-color: #E2EAE2;
+  background-attachment: fixed;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: 70px;
+  margin: 0;
+  font-size: 120%;
+}
+.container {
+  margin: 0 auto;
+  background: inherit;
+  padding: 0;
+}
+header {
+  /*background: #144914;*/
+  background: #112611;
+  width: 100%;
+  padding: 20px 15px 15px 15px;
+  position: fixed;
+  z-index: 10;
+}
+.navbar-form {
+  float: inherit;
+}
+#login-buttons {
+  display: block;
+  float: right;
+}
+#login-buttons #login-dropdown-list {
+  position: absolute;
+  top: -1px;
+  right: 0;
+  left: inherit;
+}
+#login-buttons a, #login-buttons a:visited, #login-buttons a:active{
+  color: #eee;
+}
+#login-buttons a:focus, #login-buttons a:hover {
+  color: #fff;
+}
+.login-link-text{
+  font-size: 15px;
+}
+#firstPage {
+  /*background: #E4FDE4;*/
+  background: #E2EAE2;
+}
+#firstPageColumn1 {
+  padding: 0;
+  background: #fff;
+  max-height: 273px;
+  /*border-color: #FFFFFF;
+  border-style: double;*/
+}
+#firstPageColumn1MODAL {
+  padding: 0;
+  background: #fff;
+}
+#firstPageColumn1:hover {
+  -moz-box-shadow: 0 0 40px #112611;
+  -webkit-box-shadow: 0 0 40px #112611;
+  box-shadow: 0 0 40px #112611;
+  z-index: 10;
+}
+.modal {
+  /*border-style: solid;
+  border-color: #000000;
+  border-radius: 10px;
+  opacity: 0.9;*/
+}
+.modal-header {
+  background: #FFFFFF;
+}
+.modal-footer {
+  background: #FFFFFF;
+}
+.modal-body{
+  background: #FFFFFF;
+}
+#userProfilePage{
+  padding: 0;
+}
+#userProfileDiv {
+  width: 100%;
+  height: auto;
+  background: #E2EAE2;
+  /*border-color: #112611;
+  border-style: double;*/
+  padding: 0;
+  margin-bottom: 2px;
+}
+#totalLikes {
+  text-align: center;
+  padding-top: 1.5em;
+}
+#totalPosts {
+  text-align: center;
+  padding-top: 1.5em;
+}
+#userDescription{
+}
+#userPhoto {
+  padding: 0;
+}
+#cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+#popUpHaiku {
+  height: 500px;
+  width: 500px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+  display: none;
+  background: url(login.png) 
+  no-repeat;
+  border: 5px double #cccccc;
+  border-radius: 0px;
+}
+
+#popUpHaiku:target, #popUpHaiku:target + #cover {
+  background: #fff;
+  display: block;
+  opacity: 2;
+}
+.cancel {
+  display: block;
+  position: absolute;
+  top: 3px;
+  right: 2px;
+  background: rgb(245, 245, 245);
+  color: black;
+  height: 30px;
+  width: 35px;
+  font-size: 30px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+}
+
+#commentArea {
+  background: #FFFFFF;
+  max-height: 70px;
+  width: 100%;
+  overflow-y: auto;
+  float: left;
+  clear:both;
+  text-align: left;
+}
+
+.comment {
+  margin-top: 5px;
+}
+
+#createNewHaiku {
+  background: rgba(255,255,255,0);
+  /*border-color: #112611;
+  border-style: none;
+  border-radius: 5px 5px;*/
+}
+
+#imageAndTextDiv {
+  background: #fff;
+  /*border-color: #112611;
+  border-style: double;*/
+  overflow: hidden;
+}
+
+#imageAndTextDiv form {
+  margin: 20% 0;
+}
+
+#createNewHaikuImage {
+  /*padding: 0;*/
+  background-position: 50% 25%;
+  background-size: cover;
+}
+#createNewHaikuImage img {
+  padding: 0;
+  height: 450px;
+  width: 450px;
+}
+#myProfile {
+}
+#login-buttons .login-button, .accounts-dialog .login-button {
+  background: white;
+  font-family: 'Open Sans', sans-serif;
+  color: #000000;
+  border-color: #112611;
+}
+#login-buttons .login-button:hover, .accounts-dialog .login-button:hover {
+  background: #112611;
+  color: #FFFFFF;
+}
+
+#login-buttons a {
+  color: #000000;
+}
+
+#login-buttons:hover a {
+    color: #112611;
+}
+
+#login-sign-in-link,#login-sign-in-link:hover{
+    color: #FFFFFF !important;
+}
+
+
+#login-buttons #login-name-link {
+  color: #FFFFFF;
+}
+#login-buttons #login-sign-in-link{
+  color: #FFFFFF; 
+}
+
+/*
+#haikuImage img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+  /*border-radius: 5px 5px;
+  border: #000 double;
+}
+*/
+#haikuImage {
+  height: 273px;
+  padding: 0;
+  background-position: 50% 25%;
+  background-size: cover;
+}
+#haikuImageMODAL {
+
+  height: 431px;
+  padding: 0;
+  background-position: 50% 25%;
+  background-size: cover;
+}
+#haikuText {
+  text-align: center;
+  padding: 0;
+  background: rgba(255,255,255,0.8);
+  /*border-radius: 5px 5px;*/
+  margin: 0;
+}
+#createHaikuText {
+  text-align: center;
+  padding: 0;
+  padding-left: 5%;
+  padding-right: 5%;
+  background: rgba(255,255,255,0.8);
+  /*border-radius: 5px 5px;*/
+  margin: 0;
+}
+.haikuInput {
+  width: 100%;
+}
+#likeButton {
+  float: left;
+  padding-right: 10px;
+}
+.glyphicon.glyphicon-heart {
+    font-size: 30px;
+    opacity: 0.90;
+}
+.glyphicon.glyphicon-heart:hover {
+    opacity: 1.0;
+}
+#commentButton {
+  float: left;
+  padding-right: 10px;
+  display:inline
+}
+
+#commentButton a {
+  color: #000000;
+}
+.glyphicon.glyphicon-comment {
+    font-size: 30px;
+    color: gray;
+    opacity: 0.9;
+}
+.glyphicon.glyphicon-comment:hover {
+    opacity: 1.0;
+}
+#editUserComment {
+  float: left;
+  margin-left: 0px;
+  padding-top: 0px;
+  display:inline
+}
+#userComment {
+  width: 70%;
+  float: left;
+  margin-right: 1px;
+}
+#username a {
+  text-decoration: underline;
+  color: black;
+}
+#username a:hover{
+  color: gray;
+  text-decoration: none !important;
+}
+/*
+#username h3 {
+  color: #FFFFFF;
+}
+.close {
+  color: #FFFFFF;
+}
+.close:hover {
+  color: #FFFFFF;
+}*/
+#postHaikuCommentButton {
+  float: left;
+  display:inline,
+  margin-left: 10px;
+}
+#shareButton {
+  float: right;
+  background: #FFFFFF;
+}
+
+.sharer-0 label span {
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+.sharer-0 label {
+  background: #FFFFFF !important;
+}
+.sharer-0 label:hover {
+  background: #e6e6e6;
+}
+#footerButtons {
+  display: inline;
+  padding: 1px;
+}
+#footerButtons form {
+  /*padding-top: 13px;*/
+  display: inline;
+  float: left;
+}
+#haikuText p, #createHaikuText p {
+  font-family: 'Indie Flower', cursive;
+  font-size: 140%;
+  color: gray;
+  /*margin: 10px auto;*/
+}
+.haikuTextModal {
+  font-family: 'Indie Flower', cursive;
+  font-size: 200%;
+  color: gray;
+  margin: 10px auto;
+}
+#editDiv {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#postBtnDiv {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#postHaikuBtn {
+  float: right;
+  padding-top: 10px;
+}
+div.feature {
+  position: relative;
+}
+div.feature a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  text-decoration: none; /* No underlines on the link */
+  z-index: 10; /* Places the link above everything else in the div */
+  background-color: #FFF; /* Fix to make div clickable in IE */
+  opacity: 0; /* Fix to make div clickable in IE */
+  filter: alpha(opacity=1); /* Fix to make div clickable in IE */
+}
+h1 {
+  font-size: 2em;
+  color: #E2EAE2;
+  margin: 0;
+  margin-bottom: 0;
+  display: inline-block;
+  margin-right: 1em;
+}
+.new-task input {
+  box-sizing: border-box;
+  padding: 10px 0;
+  background: transparent;
+  border: none;
+  width: 100%;
+  padding-right: 80px;
+  font-size: 1em;
+}
+.new-task input:focus {
+  outline: 0;
+}
+.delete {
+  float: right;
+  font-weight: bold;
+  background: none;
+  font-size: 1em;
+  border: none;
+  position: relative;
+}
+li {
+  position: relative;
+  list-style: none;
+  padding: 15px;
+  border-bottom: #eee solid 1px;
+}
+li .text {
+  margin-left: 10px;
+}
+li.checked {
+  color: #888;
+}
+li.checked .text {
+  text-decoration: line-through;
+}
+li.private {
+  background: #eee;
+  border-color: #ddd;
+}
+header .hide-completed {
+  float: right;
+}
+.toggle-private {
+  margin-left: 5px;
+}
+.inspiration {
+  position: fixed;
+  top: 70px;
+  z-index: -100;
+  min-width: 123%;
+}
+.inspiration .inspirationPhoto {
+  float: left;
+  display: block;
+}
+@media (max-width:600px) {
+  li {
+    padding: 12px 15px;
+  }
+  .search {
+    width: 150px;
+    clear: both;
+  }
+  .new-task input {
+    padding-bottom: 5px;
+  }
+}

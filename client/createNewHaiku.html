@@ -1,0 +1,65 @@
+<template name="createNewHaiku">
+  {{>nav}}
+
+  <!-- CREATE NEW HAIKU TEMPLATE -->
+
+  <div class ="col-xs-10 col-xs-offset-1" id="createNewHaiku">
+
+     <!-- EDIT HAIKU DIV -->
+    <div id="editDiv" class="col-xs-offset-1">
+
+        <!-- REFRESH IMAGE BUTTON          <div class="btn-group">
+            <button type="button" id="refresh-image" class="btn btn-default">
+              <span class="glyphicon glyphicon-refresh"></span>
+            </button>
+        </div>-->
+
+
+        <!-- INFO BUTTON 
+        <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#demo"><span class="glyphicon glyphicon-info-sign"></span></button>
+          <div id="demo" class="collapse">
+            <h5><i>Haiku is a short form of Japanese poetry that consists of 17 syllables divided into three phrases of 5, 7 and 5 syllables..
+            </i></h5>
+          </div>
+          -->
+    </div>
+    <!--!!!!!!!!!!!!!!!!!!!!!!!!!--> 
+
+    <!-- HAIKUIMAGE and -TEXT DIV-->
+    <div id="imageAndTextDiv" class="col-xs-10 col-xs-offset-1">
+      
+      <div class="col-xs-6 col-md-6 col-xs-12" id="createHaikuText">
+        <div id="infoDiv"><br>
+          <p><i>Haiku is a short form of Japanese poetry. As you start writing a Haiku below some inspirational photos will appear in the background. Then click on the photo to the right to choose a desired photo for your Haiku.</i></p>
+        </div>
+        <form>
+          <p><i>5 syllables:</i></p><input class="haikuInput" maxlength="50" type="text" id="row1">
+          <p><i>7 syllables:</i></p><input class="haikuInput" maxlength="50" type="text" id="row2">
+          <p><i>5 syllables:</i></p><input class="haikuInput" maxlength="50" type="text" id="row3">
+        </form>
+      </div>
+
+      <a href="#" id="refresh-image"><div class="col-xs-6 col-md-6 col-xs-12" id="createNewHaikuImage">
+        {{#with haikuImage}}
+          {{> flickrPhoto}}
+        {{/with}}
+      </div></a>
+
+    </div>
+    <!--!!!!!!!!!!!!!!!!!!!!!!!!!--> 
+
+    <!-- POST BUTTON-->
+    <div class="col-xs-2 col-xs-offset-9" id="postBtnDiv">
+      <button class="btn btn-default btn-lg" id="postHaikuBtn" type="submit">Post</button>
+    </div>
+    <div class="clearfix"></div>
+    <!-- -->
+
+  </div>
+
+  <!-- Inspiration photos -->
+  <div class="inspiration">
+    {{>inspirationPhotos}}
+  </div>       
+
+</template>
